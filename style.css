@@ -1,0 +1,123 @@
+nav span {
+    display: none;
+}
+
+nav {
+    background-color: var(--mainColor);
+    box-shadow: 0 3px 5px #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div {
+    display: inline-block;
+    width: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav form {
+    display: inline-block;
+    padding: 0.4rem 0;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding: 0.5rem 1rem;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 300ms;
+}
+
+nav a:hover {
+    border-bottom: 3px solid var(--white);
+}
+
+input[type=search] {
+    margin-left: 2rem;
+    width: 18rem;
+    padding: 0.3rem 0.7rem;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--white);
+    color: #8d8d8d;
+}
+
+input[type=search]:focus {
+    outline: none;
+}
+
+nav button {
+    padding: 0.3rem 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    transition: color 200ms;
+}
+
+nav button:hover {
+    color: rgb(52, 52, 52);
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    nav div {
+        display: none;
+    }
+
+    nav span {
+        display: inline-block;
+    }
+
+    nav span i {
+        color: var(--white);
+        padding: 0.5rem 0.7rem;
+        font-size: 1.3rem;
+    }
+
+    nav div {
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        top: 2rem;
+        background-color: var(--mainColor);
+        width: 10rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    input[type=search] {
+        margin-left: 0.8rem;
+        width: 14rem;
+    }
+
+    nav div {
+        width: 7rem;
+        font-size: 1rem;
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+}
